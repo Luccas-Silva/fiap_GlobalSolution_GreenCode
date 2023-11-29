@@ -33,14 +33,21 @@ public class Funcionario extends User {
 		this.id_Funcionario = id_Funcionario;
 	}
 	
-	public boolean validarId() {
+	public void validarId() {
 		boolean flag = false;
-		if(id_Funcionario != null && id_Funcionario.matches("[0-9.]+")){
-			if(id_Funcionario.length() == 6) {
-				flag = true;
+		do {
+			System.out.print("  ID: ");
+			String cadastro = sc.next();
+			id_Funcionario = cadastro;
+			if(id_Funcionario != null && id_Funcionario.matches("[0-9.]+")){
+				if(id_Funcionario.length() == 6) {
+					flag = true;
+				}
 			}
-		}
-		return flag;
+			if(flag != true) {
+				System.out.println("  ID Invalido.\n");
+			}
+		} while (flag != true);
 	}
 	
 	public void MenuFuncionario() {
@@ -66,7 +73,6 @@ public class Funcionario extends User {
 
 		}while (menu != '0');
 	}
-	
 	
  	public void Diagnostico() {
 		char menu = 's';

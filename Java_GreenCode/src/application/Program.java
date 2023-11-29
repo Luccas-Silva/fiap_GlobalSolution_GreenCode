@@ -53,26 +53,7 @@ public class Program {
 						System.out.print("\n    Digite a seu Senha: ");
 						login = sc.next();
 						if(Joao.getPassword().equals(login)) {
-							do {
-								System.out.println("\n   # Paciente "+Joao.getName()+" #");
-								System.out.println("  ----------------------- ");
-								System.out.println("  -   (1) Registro      -");
-								System.out.println("  -   (2) Declaração    -");
-								System.out.println("  -   (0) Menu          -");
-								System.out.println("  ----------------------- ");
-								
-								System.out.print("    Escolha uma Opção: ");
-								menu = sc.next().toLowerCase().charAt(0);
-								
-								if(menu == '1') {
-									Joao.Registro();
-								}
-								
-								else if(menu == '2') {
-									Joao.Declaracao();
-								}
-
-							}while (menu != '0');
+							Joao.MenuPaciente();
 						}
 					}
 					else {
@@ -82,8 +63,28 @@ public class Program {
 					}
 				}
 				else if(menu == '2') {
+					System.out.println("\n      # Paciente #");
+					System.out.println("  ----------------------- ");
+					System.out.println("       Cadastrar-se       \n");
 					
-						
+					System.out.print("  Nome: ");
+					sc.nextLine();
+					String cadastro = sc.nextLine();
+					paciente.setName(cadastro);
+					
+					paciente.validarEmail();
+					paciente.validarData();
+					paciente.validarCPF();
+					paciente.validarPhone();
+					paciente.validarCEP();
+					paciente.validarSexo();
+					paciente.validarTipoSangue();
+					
+					System.out.print("\n  Senha: ");
+					cadastro = sc.next();
+					paciente.setPassword(cadastro);
+					
+					paciente.MenuPaciente();	
 				}
 			}
 			else if(menu == '2') {
@@ -118,50 +119,15 @@ public class Program {
 					System.out.println("  ----------------------- ");
 					System.out.println("       Cadastrar-se       \n");
 					
-					
 					System.out.print("  Nome: ");
 					sc.nextLine();
 					String cadastro = sc.nextLine();
 					funcionario.setName(cadastro);						
 					
-					do {
-						
-						
-						System.out.print("  Email: ");
-						cadastro = sc.nextLine();
-						funcionario.setEmail(cadastro);
-						if(funcionario.validarEmail() == false) {
-							System.out.println("  Email Invalido.\n");
-						}
-					} while (funcionario.validarEmail() != true);
-					
-					do {
-						System.out.print("  Ano de Nacimento: ");
-						cadastro = sc.next();
-						funcionario.setNascimento(cadastro);
-						if(funcionario.validarData() == false) {
-							System.out.println("  Data Invalido.\n");
-						}
-					} while (funcionario.validarData() != true);
-					
-					do {
-						System.out.print("  CPF: ");
-						cadastro = sc.next();
-						funcionario.setCpf(cadastro);
-						if(funcionario.validarCPF() == false) {
-							System.out.println("  CPF Invalido.\n");
-						}
-					} while (funcionario.validarCPF() != true);
-					
-					do {
-						System.out.print("  ID: ");
-						cadastro = sc.next();
-						funcionario.setId_Funcionario(cadastro);
-						if(funcionario.validarId() == false) {
-							System.out.println("  ID Invalido.\n");
-						}
-					} while (funcionario.validarId() != true);
-					
+					funcionario.validarEmail();
+					funcionario.validarData();
+					funcionario.validarCPF();
+					funcionario.validarId();
 					System.out.print("  Cargo: ");
 					cadastro = sc.next();
 					funcionario.setCargo(cadastro);

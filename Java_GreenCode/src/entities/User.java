@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.Scanner;
+
 public class User {
 	
 	private String name; 
@@ -7,6 +9,8 @@ public class User {
 	private String nascimento; 
 	private String cpf; 
 	private String password; 
+	
+	Scanner sc = new Scanner(System.in);
 	
 	public User() {
 	}
@@ -54,36 +58,61 @@ public class User {
 	}
 	
 	
-	public boolean validarEmail() {
+	public void validarEmail() {
 		boolean flag = false;
-		
-		for(int i=0; i<email.length(); i++){
-			if(email.charAt(i) == '@'){
-				flag = true;
+		do {
+			System.out.print("  Email: ");
+			String cadastro = sc.nextLine();
+			email = cadastro;
+			for(int i=0; i<email.length(); i++){
+				if(email.charAt(i) == '@'){
+					flag = true;
+				}
 			}
-		}
-		return flag;
+			if(flag != true) {
+				System.out.println("  Email Invalido.\n");
+			}
+		} while (flag != true);
 	}
 	
-	public boolean validarData() {
+	public void validarData() {
 		boolean flag = false;
-		
-		if(nascimento != null && nascimento.matches("[0-9.]+")){
-			if(nascimento.length() == 4) {
-				flag = true;
+		do {
+			System.out.print("  Ano de Nacimento: ");
+			String cadastro = sc.next();
+			nascimento = cadastro;
+			if(nascimento != null && nascimento.matches("[0-9.]+")){
+				if(nascimento.length() == 4) {
+					flag = true;
+				}
 			}
-		}
-		return flag;
+			
+			if(flag != true) {
+				System.out.println("  Data Invalido.\n");
+			}
+		} while (flag != true);
+		
 	}
 	
-	public boolean validarCPF() {
+	public void validarCPF() {
 		boolean flag = false;
-		if(cpf != null && cpf.matches("[0-9.]+")){
-			if(cpf.length() == 11) {
-				flag = true;
+		do {
+			System.out.print("  CPF: ");
+			String cadastro = sc.next();
+			cpf = cadastro;
+			if(cpf != null && cpf.matches("[0-9.]+")){
+				if(cpf.length() == 11) {
+					flag = true;
+				}
 			}
-		}
-		return flag;
+			if(flag != true) {
+				System.out.println("  CPF Invalido.\n");
+			}
+		} while (flag != true);
+		
+		
+		
+		
 	}
 	
 	public void Registro() {

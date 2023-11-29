@@ -60,36 +60,155 @@ public class Paciente extends User {
 		Declaracao = declaracao;
 	}
 	
-	public boolean validarPhone() {
+	public void validarPhone() {
 		boolean flag = false;
-		if(phone != null && phone.matches("[0-9.]+")){
-			if(phone.length() == 11) {
-				flag = true;
+		do {
+			System.out.print("  Phone: ");
+			String cadastro = sc.next();
+			setPhone(cadastro);
+			if(phone != null && phone.matches("[0-9.]+")){
+				if(phone.length() == 11) {
+					flag = true;
+				}
 			}
-		}
-		return flag;
+			else {
+				System.out.println("  Phone Invalido.\n");
+			}
+		} while (flag != true);
+		
+		
 	}
 	
-	public boolean validarCEP() {
+	public void validarCEP() {
 		boolean flag = false;
-		if(phone != null && phone.matches("[0-9.]+")){
-			if(phone.length() == 8) {
-				flag = true;
+		do {
+			System.out.print("  CEP: ");
+			String cadastro = sc.next();
+			setCep(cadastro);
+			
+			if(cep != null && cep.matches("[0-9.]+")){
+				if(cep.length() == 8) {
+					flag = true;
+				}
 			}
-		}
-		return flag;
+			else {
+				System.out.println("  CEP Invalido.\n");
+			}
+			
+		} while (flag != true);
 	}
 	
-	public String validarSexo() {
-		return sexo;
-		
-		
+	public void validarSexo() {
+		boolean flag = false;
+		char menu = 's';
+		do {
+			System.out.println("\n   #  Sexo Paciente  #");
+			System.out.println("  ----------------------- ");
+			System.out.println("  -   (1) Masculino     -");
+			System.out.println("  -   (2) Feminino      -");
+			System.out.println("  -   (3) Outros        -");
+			System.out.println("  ----------------------- ");
+			System.out.print("    Escolha uma Opção: ");
+			menu = sc.next().toLowerCase().charAt(0);
+				if(menu == '1') {
+					sexo = "Masculino";
+					flag = true;
+				}
+				
+				else if(menu == '2') {
+					sexo = "Feminino";
+					flag = true;
+				}
+				
+				else if(menu == '3') {
+					sexo = "Outros";
+					flag = true;
+				}
+				else {
+					System.out.println("  Opção Invalido.\n");
+				}
+		} while (flag != true);
 	}
 	
-	public String validarTipoSangue() {
-		return tipoSangue;
-		
-		 
+	public void validarTipoSangue() {
+		boolean flag = false;
+		char menu = 's';
+		do {
+			System.out.println("\n    # Tipo Sanguíneo  #");
+			System.out.println("  ----------------------- ");
+			System.out.println("  -   (1) A+            -");
+			System.out.println("  -   (2) B+            -");
+			System.out.println("  -   (3) AB+           -");
+			System.out.println("  -   (4) O+            -");
+			System.out.println("  -   (5) A-            -");
+			System.out.println("  -   (6) B-            -");
+			System.out.println("  -   (7) AB-           -");
+			System.out.println("  -   (8) O-            -");
+			System.out.println("  ----------------------- ");
+			System.out.print("    Escolha uma Opção: ");
+			menu = sc.next().toLowerCase().charAt(0);
+				if(menu == '1') {
+					tipoSangue = "A+";
+					flag = true;
+				}
+				
+				else if(menu == '2') {
+					tipoSangue = "B+";
+					flag = true;
+				}
+				
+				else if(menu == '3') {
+					tipoSangue = "AB+";
+					flag = true;
+				}
+				else if(menu == '4') {
+					tipoSangue = "O+";
+					flag = true;
+				}
+				else if(menu == '5') {
+					tipoSangue = "A-";
+					flag = true;
+				}
+				else if(menu == '6') {
+					tipoSangue = "B-";
+					flag = true;
+				}
+				else if(menu == '7') {
+					tipoSangue = "AB-";
+					flag = true;
+				}
+				else if(menu == '8') {
+					tipoSangue = "O";
+					flag = true;
+				}
+				else {
+					System.out.println("  Opção Invalido.\n");
+				}
+		} while (flag != true);
+	}
+
+	public void MenuPaciente() {
+		char menu = 's';
+		do {
+			System.out.println("\n   # Paciente "+getName()+" #");
+			System.out.println("  ----------------------- ");
+			System.out.println("  -   (1) Registro      -");
+			System.out.println("  -   (2) Declaração    -");
+			System.out.println("  -   (0) Menu          -");
+			System.out.println("  ----------------------- ");
+			
+			System.out.print("    Escolha uma Opção: ");
+			menu = sc.next().toLowerCase().charAt(0);
+			
+			if(menu == '1') {
+				Registro();
+			}
+			
+			else if(menu == '2') {
+				Declaracao();
+			}
+
+		}while (menu != '0');
 	}
 	
 	public void Declaracao() {
@@ -124,16 +243,16 @@ public class Paciente extends User {
 	
 	
  	public void Registro() {
-		System.out.println("Paciente:"+
-				"\n Name: " + getName() +
-				"\n Email: " + getEmail() + 
-				"\n Nascimento: " + getNascimento() + 
-				"\n CPF: " + getCpf() + 
-				"\n Senha: "+ getPassword() +
-				"\n Phone: " + phone +
-				"\n CEP: " + cep +
-				"\n Sexo: " + sexo +
-				"\n Tipo Sangue: " + tipoSangue);
+		System.out.println("\n    Paciente:"+
+				"\n     Name: " + getName() +
+				"\n     Email: " + getEmail() + 
+				"\n     Nascimento: " + getNascimento() + 
+				"\n     CPF: " + getCpf() + 
+				"\n     Senha: "+ getPassword() +
+				"\n     Phone: " + phone +
+				"\n     CEP: " + cep +
+				"\n     Sexo: " + sexo +
+				"\n     Tipo Sangue: " + tipoSangue);
 	}
 
 }
