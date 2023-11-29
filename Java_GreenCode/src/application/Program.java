@@ -20,6 +20,8 @@ public class Program {
 		Senha: Agatha-2000 */
 		Funcionario Agatha = new Funcionario("Agatha Alves", "Agatha@gmail.com", "2000", "12345678910", "Agatha-2000", "Médico", "123456");
 		
+		Paciente paciente = new Paciente();
+		Funcionario funcionario = new Funcionario();
 		
 		char menu = 's';
 		do {
@@ -127,11 +129,30 @@ public class Program {
 					else {
 						System.out.print("\n    Erro no Login"
 								+ "\n    Tentar Novamente  \n");
-			
 					}
 				}
 				
 				else if(menu == '2') {
+					System.out.println("\n      # Funcionario #");
+					System.out.println("  ----------------------- ");
+					System.out.println("       Cadastrar-se        \n");
+					System.out.print("  Nome: ");
+					String cadastro = sc.nextLine();
+					funcionario.setName(cadastro);
+					do {
+						System.out.print("  Email: ");
+						sc.next();
+						cadastro = sc.nextLine();
+						funcionario.setEmail(cadastro);
+						if(funcionario.validarEmail() == false) {
+							System.out.println("  Email Invalido.\n");
+						}
+					} while (funcionario.validarEmail() != true);
+					
+					
+					
+					System.out.print("    Escolha uma Opção: ");
+					menu = sc.next().toLowerCase().charAt(0);
 					
 						
 				}

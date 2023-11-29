@@ -56,6 +56,7 @@ public class User {
 	
 	public boolean validarEmail() {
 		boolean flag = false;
+		
 		for(int i=0; i<email.length(); i++){
 			if(email.charAt(i) == '@'){
 				flag = true;
