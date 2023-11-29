@@ -104,26 +104,7 @@ public class Program {
 						System.out.print("\n    Digite a seu Senha: ");
 						login = sc.next();
 						if(Agatha.getPassword().equals(login)) {
-							do {
-								System.out.println("\n  # Funcionario "+Agatha.getName()+" #");
-								System.out.println("  ---------------------------- ");
-								System.out.println("  -     (1) Registro         -");
-								System.out.println("  -     (2) Diagnosticos     -");
-								System.out.println("  -     (0) Menu             -");
-								System.out.println("  ---------------------------- ");
-								
-								System.out.print("    Escolha uma Opção: ");
-								menu = sc.next().toLowerCase().charAt(0);
-								
-								if(menu == '1') {
-									Agatha.Registro();
-								}
-								
-								else if(menu == '2') {
-									Agatha.Diagnostico();
-								}
-
-							}while (menu != '0');
+							Agatha.MenuFuncionario();
 						}
 					}
 					else {
@@ -135,13 +116,18 @@ public class Program {
 				else if(menu == '2') {
 					System.out.println("\n      # Funcionario #");
 					System.out.println("  ----------------------- ");
-					System.out.println("       Cadastrar-se        \n");
+					System.out.println("       Cadastrar-se       \n");
+					
+					
 					System.out.print("  Nome: ");
+					sc.nextLine();
 					String cadastro = sc.nextLine();
-					funcionario.setName(cadastro);
+					funcionario.setName(cadastro);						
+					
 					do {
+						
+						
 						System.out.print("  Email: ");
-						sc.next();
 						cadastro = sc.nextLine();
 						funcionario.setEmail(cadastro);
 						if(funcionario.validarEmail() == false) {
@@ -149,12 +135,42 @@ public class Program {
 						}
 					} while (funcionario.validarEmail() != true);
 					
+					do {
+						System.out.print("  Ano de Nacimento: ");
+						cadastro = sc.next();
+						funcionario.setNascimento(cadastro);
+						if(funcionario.validarData() == false) {
+							System.out.println("  Data Invalido.\n");
+						}
+					} while (funcionario.validarData() != true);
 					
+					do {
+						System.out.print("  CPF: ");
+						cadastro = sc.next();
+						funcionario.setCpf(cadastro);
+						if(funcionario.validarCPF() == false) {
+							System.out.println("  CPF Invalido.\n");
+						}
+					} while (funcionario.validarCPF() != true);
 					
-					System.out.print("    Escolha uma Opção: ");
-					menu = sc.next().toLowerCase().charAt(0);
+					do {
+						System.out.print("  ID: ");
+						cadastro = sc.next();
+						funcionario.setId_Funcionario(cadastro);
+						if(funcionario.validarId() == false) {
+							System.out.println("  ID Invalido.\n");
+						}
+					} while (funcionario.validarId() != true);
 					
-						
+					System.out.print("  Cargo: ");
+					cadastro = sc.next();
+					funcionario.setCargo(cadastro);
+					
+					System.out.print("  Senha: ");
+					cadastro = sc.next();
+					funcionario.setPassword(cadastro);
+					
+					funcionario.MenuFuncionario();	
 				}
 			}
 			
@@ -163,7 +179,7 @@ public class Program {
 				menu = sc.next().toLowerCase().charAt(0);
 			}
 			
-		} while (menu != 's');
+		} while (menu != 's' );
 		System.out.println("\n Obrigado por usar o nosso Sistema.\n");
 		System.out.println("    #        Dev Team       #");
 		System.out.println("    -------------------------");

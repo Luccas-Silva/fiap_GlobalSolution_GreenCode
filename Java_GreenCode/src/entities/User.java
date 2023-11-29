@@ -67,6 +67,7 @@ public class User {
 	
 	public boolean validarData() {
 		boolean flag = false;
+		
 		if(nascimento != null && nascimento.matches("[0-9.]+")){
 			if(nascimento.length() == 4) {
 				flag = true;

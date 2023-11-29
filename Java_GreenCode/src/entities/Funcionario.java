@@ -43,7 +43,32 @@ public class Funcionario extends User {
 		return flag;
 	}
 	
-	public void Diagnostico() {
+	public void MenuFuncionario() {
+		char menu = 's';
+		do {
+			System.out.println("\n  # Funcionario "+getName()+" #");
+			System.out.println("  ---------------------------- ");
+			System.out.println("  -     (1) Meu Registro     -");
+			System.out.println("  -     (2) Diagnosticos     -");
+			System.out.println("  -     (0) Menu             -");
+			System.out.println("  ---------------------------- ");
+			
+			System.out.print("    Escolha uma Opção: ");
+			menu = sc.next().toLowerCase().charAt(0);
+			
+			if(menu == '1') {
+				Registro();
+			}
+			
+			else if(menu == '2') {
+				Diagnostico();
+			}
+
+		}while (menu != '0');
+	}
+	
+	
+ 	public void Diagnostico() {
 		char menu = 's';
 		do {
 			System.out.println("\n     # Diagnosticos #");
@@ -99,14 +124,14 @@ public class Funcionario extends User {
 	}
 	
 	public void Registro() {
-		System.out.println("Funcionario:"+
-				"\n Name: " + getName() +
-				"\n Email: " + getEmail() + 
-				"\n Nascimento: " + getNascimento() + 
-				"\n CPF: " + getCpf() + 
-				"\n Senha: "+ getPassword() +
-				"\n Cargo: " + cargo +
-				"\n ID: " + id_Funcionario);
+		System.out.println("\n    Funcionario:"+
+				"\n     Name: " + getName() +
+				"\n     Email: " + getEmail() + 
+				"\n     Nascimento: " + getNascimento() + 
+				"\n     CPF: " + getCpf() + 
+				"\n     Senha: "+ getPassword() +
+				"\n     Cargo: " + cargo +
+				"\n     ID: " + id_Funcionario);
 	} 
 
 	
