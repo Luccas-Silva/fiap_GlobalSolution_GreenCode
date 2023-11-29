@@ -49,17 +49,19 @@ public class Program {
 				if(menu == '1') {
 					System.out.print("\n    Digite o seu Email: ");
 					String login = sc.next();
+					
 					if(Joao.getEmail().equals(login)) {
 						System.out.print("\n    Digite a seu Senha: ");
 						login = sc.next();
+						
 						if(Joao.getPassword().equals(login)) {
 							Joao.MenuPaciente();
 						}
 					}
+					
 					else {
 						System.out.print("\n    Erro no Login"
 								+ "\n    Tentar Novamente  \n");
-			
 					}
 				}
 				else if(menu == '2') {
@@ -101,13 +103,16 @@ public class Program {
 				if(menu == '1') {
 					System.out.print("\n    Digite o seu Email: ");
 					String login = sc.next();
+					
 					if(Agatha.getEmail().equals(login)) {
 						System.out.print("\n    Digite a seu Senha: ");
 						login = sc.next();
+						
 						if(Agatha.getPassword().equals(login)) {
 							Agatha.MenuFuncionario();
 						}
 					}
+					
 					else {
 						System.out.print("\n    Erro no Login"
 								+ "\n    Tentar Novamente  \n");
@@ -128,6 +133,7 @@ public class Program {
 					funcionario.validarData();
 					funcionario.validarCPF();
 					funcionario.validarId();
+					
 					System.out.print("  Cargo: ");
 					cadastro = sc.next();
 					funcionario.setCargo(cadastro);
@@ -146,10 +152,13 @@ public class Program {
 			}
 			
 		} while (menu != 's' );
-		System.out.println("\n Obrigado por usar o nosso Sistema.\n");
-		System.out.println("    #        Dev Team       #");
-		System.out.println("    -------------------------");
-		
+		System.out.println("\n  Obrigado por usar o nosso Sistema.\n");
+		System.out.println("           GreenCode - Dev Team         ");
+		System.out.println("  #------------------------------------#");
+		System.out.println("  | Nome: Luccas Silva    | RM: 552890 | ");
+		System.out.println("  | Nome: Daniel Fernando | RM: 553785 |");
+		System.out.println("  | Nome: Igor Gabriel    | RM: 553544 |");
+		System.out.println("  #------------------------------------#");
 		
 		sc.close();
 
