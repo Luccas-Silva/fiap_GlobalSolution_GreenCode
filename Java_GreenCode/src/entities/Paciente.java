@@ -241,7 +241,6 @@ public class Paciente extends User {
 		
 	}
 	
-	
  	public void Registro() {
 		System.out.println("\n    Paciente:"+
 				"\n     Name: " + getName() +
