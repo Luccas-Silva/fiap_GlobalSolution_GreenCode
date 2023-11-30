@@ -227,7 +227,7 @@ public class Paciente extends User {
 				System.out.println("\n  Prezado "+getName()
 						+"\n  Gostaríamos que realizasse uma breve descrição"
 						+ "\n  sobre como tem se sentido recentemente: ");
-				sc.next();
+				sc.nextLine();
 				Declaracao = sc.nextLine();
 			}
 			else if(menu == '2') {

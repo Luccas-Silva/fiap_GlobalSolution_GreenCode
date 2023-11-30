@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Funcionario extends User {
 
 	private String cargo;
-	private String id_Funcionario;
+	private String idFuncionario;
 	
 	Scanner sc = new Scanner(System.in);
 	
@@ -13,10 +13,10 @@ public class Funcionario extends User {
 		super();
 	}
 	public Funcionario(String name, String email, String nascimento, String cpf, String password, String cargo,
-			String id_Funcionario) {
+			String idFuncionario) {
 		super(name, email, nascimento, cpf, password);
 		this.cargo = cargo;
-		this.id_Funcionario = id_Funcionario;
+		this.idFuncionario = idFuncionario;
 	}
 	
 	public String getCargo() {
@@ -26,11 +26,11 @@ public class Funcionario extends User {
 		this.cargo = cargo;
 	}
 	
-	public String getId_Funcionario() {
-		return id_Funcionario;
+	public String getidFuncionario() {
+		return idFuncionario;
 	}
-	public void setId_Funcionario(String id_Funcionario) {
-		this.id_Funcionario = id_Funcionario;
+	public void setidFuncionario(String idFuncionario) {
+		this.idFuncionario = idFuncionario;
 	}
 	
 	public void validarId() {
@@ -38,9 +38,9 @@ public class Funcionario extends User {
 		do {
 			System.out.print("  ID: ");
 			String cadastro = sc.next();
-			id_Funcionario = cadastro;
-			if(id_Funcionario != null && id_Funcionario.matches("[0-9.]+")){
-				if(id_Funcionario.length() == 6) {
+			idFuncionario = cadastro;
+			if(idFuncionario != null && idFuncionario.matches("[0-9.]+")){
+				if(idFuncionario.length() == 6) {
 					flag = true;
 				}
 			}
@@ -137,7 +137,7 @@ public class Funcionario extends User {
 				"\n     CPF: " + getCpf() + 
 				"\n     Senha: "+ getPassword() +
 				"\n     Cargo: " + cargo +
-				"\n     ID: " + id_Funcionario);
+				"\n     ID: " + idFuncionario);
 	} 
 
 	
