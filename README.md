@@ -24,7 +24,7 @@ facilitar o acompanhamento e planejamento de tratamentos eletivos para o pacient
 ## Diagrama de Classes
 <div align="center">
   
-  ![GreenCode](https://github.com/Luccas-Silva/fiap_GlobalSolution_GreenCode/assets/89430801/93dee337-3636-4457-921d-94cd925e30bc)
+  ![GreenCode](https://github.com/Luccas-Silva/fiap_GlobalSolution_GreenCode/assets/89430801/6b4fa432-16ee-4b71-9900-46e55a936226)
 </div>
 
   
