@@ -83,86 +83,47 @@ body {
     border-bottom: 0.2rem solid;
 }
 
-.main-login{
-    height: 80dvh;
-    width: 100%;
+
+#logo {
+    width: 30rem;
+}
+
+
+.teams{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 20rem;
+    width: 60rem;
+    margin: 3rem 0rem;
+
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
-    align-items: center;
 
+    border-radius: 16px;
+    border: 2px solid var(--second-color);
 }
 
-.left-login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.login-image {
-    width: 20vw;
-    margin-top: 2rem;
-}
-
-.right-login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-.card-login {
-    width: 40dvw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-      
-}
-
-.card-login h1 {
-    
-    margin: 0rem 0rem 2rem 0rem;
-}
-
-.textfiled {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0rem 0rem 1.5rem 0rem;
-}
-
-.textfiled input {
-    width: 100%;
-    background: var(--background-color);
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-top: 1rem;
-    padding: 1rem 1.5rem;
-    border-radius: 5px;
-    border: 1px solid;
-}
-
-.textfiled a {
-    color: var(--second-color);
-    
-    margin-top: 0.5rem;
-}
-
-.btn-login {
-    width: 100%;
-    padding: 1.5rem 0px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
+.info p {
     font-size: 2rem;
-    color: var(--background-color);
-    background: var(--second-color);
-    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
 }
+
+.icon {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 100px;
+    border: 2px solid var(--second-color);
+}
+
+
 
 
 footer {
@@ -244,13 +205,18 @@ footer {
         cursor: pointer;
         color: var(--second-color);
     }
-
-    .left-login{
-        display: none;
-    }
-
-    .card-login{
-        width: 75dvw;
-    }
 }
 
+@media (max-width: 700px) {
+    .card {
+        height: 40rem;
+        width: 40rem;
+        flex-direction: column;
+    }
+
+    .icon {
+        height: 20rem;
+        width: 20rem;
+    }
+
+}

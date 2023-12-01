@@ -83,86 +83,51 @@ body {
     border-bottom: 0.2rem solid;
 }
 
-.main-login{
-    height: 80dvh;
-    width: 100%;
+.box {
+    margin-bottom: 15rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.box img {
+    width: 20dvw;
 
 }
 
-.left-login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+#img1 {
+    margin-right: 10rem;
 }
 
-.login-image {
-    width: 20vw;
-    margin-top: 2rem;
+#img2 {
+    width: 25dvw;
+    margin-left: 5rem;
 }
-
-.right-login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+#img3{
+    width: 30dvw;
+    margin-right: 0rem;
+}
+#img4{
+    width: 30dvw;
 }
 
 
-.card-login {
-    width: 40dvw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-      
+.text-box{
+    width: 50dvw;
+    text-align: justify;
 }
-
-.card-login h1 {
-    
-    margin: 0rem 0rem 2rem 0rem;
-}
-
-.textfiled {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0rem 0rem 1.5rem 0rem;
-}
-
-.textfiled input {
-    width: 100%;
-    background: var(--background-color);
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-top: 1rem;
-    padding: 1rem 1.5rem;
-    border-radius: 5px;
-    border: 1px solid;
-}
-
-.textfiled a {
+.text-box h1{
+    font-size: 4.5rem;
     color: var(--second-color);
+    margin-bottom: 1rem;
     
-    margin-top: 0.5rem;
+}
+#text2 h1{
+    text-align: end;
 }
 
-.btn-login {
-    width: 100%;
-    padding: 1.5rem 0px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 2rem;
-    color: var(--background-color);
-    background: var(--second-color);
-    cursor: pointer;
-}
+
+
 
 
 footer {
@@ -244,13 +209,4 @@ footer {
         cursor: pointer;
         color: var(--second-color);
     }
-
-    .left-login{
-        display: none;
-    }
-
-    .card-login{
-        width: 75dvw;
-    }
 }
-

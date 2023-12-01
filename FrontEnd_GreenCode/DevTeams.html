@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/DevTeams.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>GreenCode - Login</title>
+    <title>GreenCode - Dev Teams</title>
 </head>
 <body>
     <header id="header">
@@ -17,7 +17,7 @@
         <nav id="nav">
             <button id="btn-mobile"><i class="ph-bold ph-list"></i></button>
             <ul id="menu">
-                <li><a href="Home.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/">Pacientes</a></li>
                 <li><a href="/">Funcionário</a></li>
                 <li><a href="DevTeams.html">Dev Teams</a></li>
@@ -25,28 +25,34 @@
         </nav>
     </header>
 
-    <div class="main-login">
-        <div class="left-login">
-            <h2>Faça login<br>e navegue em nosso site</h2>
-            <img src="imgs/Logo.svg" class="login-image" alt="Logo">
+    <div class="teams">
+        <img id="logo" src="imgs/Logos.svg" alt="">
+
+        <div class="card">
+            <img class="icon" src="" alt="">
+            <div class="info">
+                <p>Nome: Luccas dos Anjos C. da Silva</p>
+                <p>RM: 552890</p>  
+            </div>
         </div>
-        <div class="right-login">
-            <div class="card-login">
-                <p>Bem vindo de volta</p>
-                <h1>Faça login na sua conta</h1>
-                <div class="textfiled">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
-                <div class="textfiled">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                    <a href="">Esqueceu sua Senha?</a>
-                </div>
-                <button class="btn-login" onclick="redirecionar()">Login now</button>
+
+        <div class="card">
+            <img class="icon" src="" alt="">
+            <div class="info">
+                <p>Nome: Igor Gabriel P. Marcondes</p>
+                <p>RM: 553544</p>  
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="icon" src="" alt="">
+            <div class="info">
+                <p>Nome: Daniel F. Alves de Magalhaes</p>
+                <p>RM: 553785</p>  
             </div>
         </div>
     </div>
+
 
     <footer>
         <div id="footer_content">
@@ -60,7 +66,7 @@
             </ul>
         </div>
         <div id="footer_copyright">&#169 2023 all rights reserved.</div>
-    </footer>
+    </footer>   
 
     <script src="js/mobile-navbar.js"></script>
 </body>
