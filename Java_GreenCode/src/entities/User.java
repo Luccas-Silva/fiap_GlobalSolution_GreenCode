@@ -108,10 +108,26 @@ public class User {
 				System.out.println("  CPF Invalido.\n");
 			}
 		} while (flag != true);
-		
-		
-		
-		
+
+	}
+	
+	public void validarSenha() {
+		boolean flag = false;
+		do {
+			System.out.print("  Criar Senha: ");
+			String cadastro = sc.next();
+			password = cadastro;
+			
+			System.out.print("  Confirmar Senha: ");
+			cadastro = sc.next();
+			if(password.equals(cadastro)) {
+				flag = true;	
+			}		
+			
+			if(flag != true) {
+				System.out.println("  Erro em Criar Senha.\n");
+			}
+		} while (flag != true);
 	}
 	
 	public void Registro() {

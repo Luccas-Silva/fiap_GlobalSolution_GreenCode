@@ -71,7 +71,7 @@ public class Paciente extends User {
 					flag = true;
 				}
 			}
-			else {
+			if(flag != true) {
 				System.out.println("  Phone Invalido.\n");
 			}
 		} while (flag != true);
@@ -91,7 +91,7 @@ public class Paciente extends User {
 					flag = true;
 				}
 			}
-			else {
+			if(flag != true) {
 				System.out.println("  CEP Invalido.\n");
 			}
 			

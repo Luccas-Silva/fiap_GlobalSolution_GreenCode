@@ -83,12 +83,9 @@ public class Program {
 					paciente.validarCPF();
 					paciente.validarPhone();
 					paciente.validarCEP();
+					paciente.validarSenha();
 					paciente.validarSexo();
 					paciente.validarTipoSangue();
-					
-					System.out.print("\n  Senha: ");
-					cadastro = sc.next();
-					paciente.setPassword(cadastro);
 					
 					paciente.MenuPaciente();	
 				}
@@ -137,14 +134,11 @@ public class Program {
 					funcionario.validarData();
 					funcionario.validarCPF();
 					funcionario.validarId();
+					funcionario.validarSenha();
 					
 					System.out.print("  Cargo: ");
 					cadastro = sc.next();
 					funcionario.setCargo(cadastro);
-					
-					System.out.print("  Senha: ");
-					cadastro = sc.next();
-					funcionario.setPassword(cadastro);
 					
 					funcionario.MenuFuncionario();	
 				}

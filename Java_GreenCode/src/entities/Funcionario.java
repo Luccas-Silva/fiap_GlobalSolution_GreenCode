@@ -45,7 +45,7 @@ public class Funcionario extends User {
 				}
 			}
 			if(flag != true) {
-				System.out.println("  ID Invalido.\n");
+				System.out.println("  ID de 6 digitos Invalido.\n");
 			}
 		} while (flag != true);
 	}
