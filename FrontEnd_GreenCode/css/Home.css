@@ -92,7 +92,6 @@ body {
 
 .box img {
     width: 20dvw;
-
 }
 
 #img1 {
@@ -119,10 +118,14 @@ body {
 .text-box h1{
     font-size: 4.5rem;
     color: var(--second-color);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: start;
     
 }
 #text2 h1{
+    text-align: end;
+}
+#text4 h1{
     text-align: end;
 }
 
@@ -208,5 +211,47 @@ footer {
         background: none;
         cursor: pointer;
         color: var(--second-color);
+    }
+
+    .box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-box h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    #text2 h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    #text4 h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .box img {
+        margin: 5rem 0rem;
+    }
+    #img1 {
+        margin: 5rem 0rem;
+    }
+    
+    #img2 {
+        margin: 5rem 0rem;
+        width: 25dvw;
+        
+    }
+    #img3{
+        margin: 5rem 0rem;
+        width: 30dvw;
+        
+    }
+    #img4{
+        margin: 5rem 0rem;
+        width: 30dvw;
+        
     }
 }
