@@ -262,9 +262,11 @@ footer {
         border-radius: 1.5rem;
         border: solid 0.3rem var(--second-color);
     }
+    
     .box img {
         display: none;
     }
+
     .box h1 {
         font-size: 2.5rem;
     }

@@ -14,6 +14,12 @@
     --primary-color: #737373;
     --second-color: #7CC529;
     --background-color: #E4E2DD;
+
+    .dark-mode:root {
+        --background-color: #737373;
+        --second-color: #7CC529;
+        --primary-color: #E4E2DD; 
+    }
 }
 
 html, body {
